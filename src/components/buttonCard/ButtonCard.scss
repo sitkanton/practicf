@@ -1,0 +1,28 @@
+@use '@assets/webColors' as *;
+
+.ButtonCard {
+  width: 100%;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: $green;
+  color: $white;
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 26px;
+  transition: 150ms;
+
+  &:hover {
+    background-color: $black;
+  }
+
+  &.added {
+    background-color: $white;
+    color: $black;
+    border: 1px solid black;
+  }
+}

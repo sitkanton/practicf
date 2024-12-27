@@ -1,0 +1,57 @@
+@use '@assets/webColors' as *;
+
+.Contact {
+  h1 {
+    font-size: 64px;
+    margin-top: 80px;
+  }
+
+  .cards {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns:780px 548px;
+    gap: 32px;
+
+    .item {
+      background-color: $light-grey;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-radius: 10px;
+
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        color: $grey;
+      }
+
+      h2, a {
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+      &.social > div {
+        display: flex;
+        gap: 16px;
+
+        svg {
+          width: 43px;
+        }
+      }
+    }
+  }
+}
+
+.map {
+  margin-top: 32px;
+  margin-bottom: 80px;
+
+  iframe {
+    width: 100%;
+    min-height: 350px;
+    border-radius: 10px;
+    border: none;
+    outline: 1px solid transparent;
+  }
+}

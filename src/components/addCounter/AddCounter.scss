@@ -1,0 +1,44 @@
+.addCounter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  height: 58px;
+
+  button {
+    flex: 0 0 58px;
+    height: 100%;
+    border: none;
+    background-color: #f9f9f9;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+
+    &:active {
+      background-color: #ddd;
+    }
+  }
+
+  .decrement {
+    border-right: 1px solid #ccc;
+  }
+
+  .increment {
+    border-left: 1px solid #ccc;
+  }
+
+  span {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

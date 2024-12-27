@@ -1,0 +1,109 @@
+@use '@assets/webColors' as *;
+
+.filters {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  .filter {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    input {
+      padding: 8px 8px 8px 16px;
+      max-width: 120px;
+      border: none;
+      outline: 1px solid $grey;
+      border-radius: 5px;
+
+      &::placeholder {
+        font-size: 16px;
+        color: $grey;
+      }
+    }
+
+
+    .custom-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      cursor: pointer;
+
+      input {
+        display: none;
+      }
+
+      span {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 2px solid $grey-divider;
+        border-radius: 8px;
+        background-color: $white;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      input:checked + span {
+        background-color: $green;
+        border-color: $green;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          width: 4px;
+          height: 12px;
+          border: solid #fff;
+          border-width: 0 3px 3px 0;
+          transform: translate(-50%, -50%) rotate(45deg);
+          transition: all 0.1s ease;
+        }
+      }
+    }
+  }
+
+  .custom-select {
+    position: relative;
+    min-width: 220px;
+
+    select {
+      appearance: none;
+      outline: none;
+      width: 200px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border: 1px solid $grey-divider;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .select {
+      display: flex;
+      gap: 16px;
+      font-size: 20px;
+      font-weight: 600;
+      align-items: center;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      pointer-events: none;
+      width: 20px;
+      height: 20px;
+    }
+
+  }
+}

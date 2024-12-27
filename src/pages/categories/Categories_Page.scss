@@ -1,0 +1,13 @@
+.CategoriesPage {
+  margin-top: 116px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
